@@ -1,14 +1,11 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
+import Layout from 'components/Layout'
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <Head>
-        <title>Epidemic Sound Library</title>
-      </Head>
+    <Layout headTitle="Music">
       <h1 className="text-2xl font-bold text-indigo-600">Hello Celda mae</h1>
-    </div>
+    </Layout>
   )
 }
 
