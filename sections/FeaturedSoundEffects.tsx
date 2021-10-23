@@ -1,13 +1,16 @@
 import React from 'react'
 import Image from 'next/image'
-import { featuredSoundEffects } from 'mock'
 import Link from 'next/link'
 
-const FeaturedSoundEffects: React.FC = () => {
+interface FeaturedSoundEffectsProps {
+  data: any
+}
+
+const FeaturedSoundEffects: React.FC<FeaturedSoundEffectsProps> = ({ data }) => {
   return (
-    <section className="mt-8 grid grid-cols-3 md:grid-cols-6 gap-8">
-      {featuredSoundEffects.map(({ image, title }, i) => (
-        <Link href="/sound_effects/" key={i}>
+    <section className="mt-8 grid grid-cols-3 lg:grid-cols-6 gap-8">
+      {data?.sound_effects.map(({ image, title, route }, i) => (
+        <Link href={route} key={i}>
           <a>
             <div className="overflow-hidden filter hover:brightness-75 transition ease-in-out duration-300">
               <Image
