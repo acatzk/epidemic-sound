@@ -11,7 +11,7 @@ const NavBar: React.FC = () => {
   const router = useRouter()
 
   return (
-    <header className="sticky top-0 bg-[#0F0F0F] container max-w-[90rem] py-5 px-6 md:px-16 flex items-center justify-between">
+    <header className="sticky top-0 bg-[#0F0F0F] container max-w-[90rem] py-5 px-8 md:px-16 flex items-center justify-between z-50">
       <Logo className="h-5" />
       <nav>
         <ul className="flex items-center space-x-8">
