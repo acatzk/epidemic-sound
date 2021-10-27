@@ -1,12 +1,24 @@
 import type { NextPage } from 'next'
-import Layout from 'components/Layout'
+import React, { useEffect } from 'react'
+import router from 'next/router'
+import { Loading } from 'utils/Icons'
+import Head from 'next/head'
 
-const Home: NextPage = () => {
+const Index: NextPage = () => {
+  useEffect(() => {
+    router.push('/music/featured')
+  }, [])
+
   return (
-    <Layout headTitle="Music">
-      <h1 className="text-2xl font-bold text-indigo-600">Hello Celda mae</h1>
-    </Layout>
+    <React.Fragment>
+      <Head>
+        <title>Free Music and Sound Effect</title>
+      </Head>
+      <div className="h-screen flex items-center justify-center bg-[#0F0F0F]">
+        <Loading className="w-10 h-10 text-white" />
+      </div>
+    </React.Fragment>
   )
 }
 
-export default Home
+export default Index
