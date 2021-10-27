@@ -32,3 +32,14 @@ export const tabLinks: ILinks[] = [
     path: '/music/themes'
   }
 ]
+
+export const searchLinks: ILinks[] = [
+  {
+    name: 'Music',
+    path: '/music/search'
+  },
+  {
+    name: 'Sound Effects',
+    path: '/sound-effects/search'
+  },
+]

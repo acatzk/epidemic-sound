@@ -10,6 +10,12 @@ import { Menu, Transition } from '@headlessui/react'
 const NavBar: React.FC = () => {
   const router = useRouter()
 
+  function goToSearch() {
+    return router.pathname === '/music/featured'
+      ? router.push('/music/search')
+      : router.push('/sound-effects/search')
+  }
+
   return (
     <header className="sticky top-0 bg-[#0F0F0F] container max-w-[90rem] py-5 px-8 md:px-16 flex items-center justify-between z-50">
       <Link href="/music/featured">
@@ -35,7 +41,7 @@ const NavBar: React.FC = () => {
             </li>
           ))}
           <li>
-            <button>
+            <button onClick={goToSearch}>
               <RiSearch2Line className="w-5 h-5 text-white md:text-gray-500 hover:text-white transition ease-in-out duration-75" />
             </button>
           </li>
