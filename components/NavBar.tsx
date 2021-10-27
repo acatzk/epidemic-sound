@@ -12,7 +12,7 @@ const NavBar: React.FC = () => {
 
   return (
     <header className="sticky top-0 bg-[#0F0F0F] container max-w-[90rem] py-5 px-8 md:px-16 flex items-center justify-between z-50">
-      <Link href="/">
+      <Link href="/music/featured">
         <a>
           <Logo className="h-5" />
         </a>
