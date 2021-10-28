@@ -17,19 +17,19 @@ export const navLinks: ILinks[] = [
 export const tabLinks: ILinks[] = [
   {
     name: 'Featured',
-    path: '/music/featured'
+    path: '/featured'
   },
   {
     name: 'Genres',
-    path: '/music/genres'
+    path: '/genres'
   },
   {
     name: 'Moods',
-    path: '/music/moods'
+    path: '/moods'
   },
   {
     name: 'Themes',
-    path: '/music/themes'
+    path: '/themes'
   }
 ]
 

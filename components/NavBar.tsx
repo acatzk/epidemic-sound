@@ -25,21 +25,32 @@ const NavBar: React.FC = () => {
       </Link>
       <nav>
         <ul className="flex items-center space-x-8">
-          {navLinks.map(({ name, path }, i) => (
-            <li key={i} className="hidden md:block">
-              <Link href={path}>
-                <a
-                  className={`font-semibold ${
-                    router.pathname === path
-                      ? 'text-white'
-                      : 'text-gray-500 hover:text-white transition ease-in-out duration-75'
-                  }`}
-                >
-                  {name}
-                </a>
-              </Link>
-            </li>
-          ))}
+          <li className="hidden md:block">
+            <Link href="/music/featured">
+              <a
+                className={`font-semibold ${
+                  router.pathname.includes('/music')
+                    ? 'text-white'
+                    : 'text-gray-500 hover:text-white transition ease-in-out duration-75'
+                }`}
+              >
+                Music
+              </a>
+            </Link>
+          </li>
+          <li className="hidden md:block">
+            <Link href="/sound-effects">
+              <a
+                className={`font-semibold ${
+                  router.pathname.includes('/sound-effects')
+                    ? 'text-white'
+                    : 'text-gray-500 hover:text-white transition ease-in-out duration-75'
+                }`}
+              >
+                Sound Effects
+              </a>
+            </Link>
+          </li>
           <li>
             <button onClick={goToSearch}>
               <RiSearch2Line className="w-5 h-5 text-white md:text-gray-500 hover:text-white transition ease-in-out duration-75" />
@@ -72,7 +83,7 @@ function MobileDropdownMenu() {
         >
           <Menu.Items className="absolute right-0 flex flex-col overflow-hidden w-56 mt-2 origin-top-right bg-[#1a1a1a] divide-y divide-gray-700 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
             <Menu.Item>
-              <Link href="/">
+              <Link href="/music/featured">
                 <a className="font-medium py-2 px-3 hover:bg-gray-800 transition ease-in-out duration-150">
                   Music
                 </a>
