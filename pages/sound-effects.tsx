@@ -4,7 +4,7 @@ import React from 'react'
 import FeaturedSoundEffects from 'sections/FeaturedSoundEffects'
 import { GetStaticProps } from 'next'
 import { hasuraAdminClient } from 'lib/hasura-admin-client'
-import { GET_SOUND_EFFECT_FEATURED_QUERY } from 'graphql/queries'
+import { GET_SFX_FEATURED_QUERY } from 'graphql/queries'
 
 interface SoundEffectsProps {
   initialData: any
@@ -25,13 +25,12 @@ const SoundEffects: NextPage<SoundEffectsProps> = ({ initialData }) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const initialData = await hasuraAdminClient.request(GET_SOUND_EFFECT_FEATURED_QUERY)
+  const initialData = await hasuraAdminClient.request(GET_SFX_FEATURED_QUERY)
 
   return {
     props: {
       initialData
-    },
-    revalidate: 1
+    }
   }
 }
 
