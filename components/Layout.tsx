@@ -14,11 +14,11 @@ const Layout: React.FC<LayoutProps> = ({ children, headTitle }) => {
       <Head>
         <title>Free Music and Sound Effect | {headTitle}</title>
       </Head>
-      <div className="bg-[#0F0F0F] min-h-screen text-white">
+      <React.Fragment>
         <NavBar />
         <main className="container max-w-[90rem] px-8 md:px-16 min-h-screen">{children}</main>
         <Footer />
-      </div>
+      </React.Fragment>
     </React.Fragment>
   )
 }

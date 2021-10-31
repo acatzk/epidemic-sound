@@ -118,3 +118,11 @@ export const Loading: React.FC<IconName> = ({ className }) => {
     </svg>
   )
 }
+
+export const Play: React.FC<IconName> = ({ className }) => {
+  return (
+    <svg className={className} name="Play" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 12L8 5V19L20 12Z"></path>
+    </svg>
+  )
+}
