@@ -1,4 +1,4 @@
-import Layout from 'components/Layout'
+import Layout from 'layouts/DefaultLayout'
 import { NextPage } from 'next'
 import React from 'react'
 import FeaturedSoundEffects from 'sections/FeaturedSoundEffects'

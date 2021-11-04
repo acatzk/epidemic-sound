@@ -1,8 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
-import Layout from 'components/Layout'
+import Layout from 'layouts/DefaultLayout'
 import { useRouter } from 'next/router'
-import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next'
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext, NextPage } from 'next'
 import { hasuraAdminClient } from 'lib/hasura-admin-client'
 import { GET_SFX_SLUGs_QUERY, GET_SFX_BY_SLUG } from 'graphql/queries'
 import AudioTrackinfo from 'components/AudioTrackInfo'
@@ -12,7 +12,7 @@ interface SFXProps {
   initialData: any
 }
 
-const SFX: React.FC<SFXProps> = ({ initialData }) => {
+const SFX: NextPage<SFXProps> = ({ initialData }) => {
   const router = useRouter()
   const { slug } = router.query
 
