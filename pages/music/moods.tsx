@@ -1,8 +1,9 @@
 import React from 'react'
-import Layout from 'components/Layout'
+import Layout from 'layouts/DefaultLayout'
 import MusicTabs from 'components/MusicTabs'
+import { NextPage } from 'next'
 
-const Moods: React.FC = () => {
+const Moods: NextPage = () => {
   return (
     <Layout headTitle="Featured">
       <MusicTabs />

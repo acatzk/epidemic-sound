@@ -1,7 +1,7 @@
 import React from 'react'
-import NavBar from './NavBar'
+import NavBar from 'components/NavBar'
 import Head from 'next/head'
-import Footer from './Footer'
+import Footer from 'components/Footer'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -14,11 +14,11 @@ const Layout: React.FC<LayoutProps> = ({ children, headTitle }) => {
       <Head>
         <title>Free Music and Sound Effect | {headTitle}</title>
       </Head>
-      <React.Fragment>
+      <div className="bg-[#0F0F0F] text-white">
         <NavBar />
         <main className="container max-w-[90rem] px-8 md:px-16 min-h-screen">{children}</main>
         <Footer />
-      </React.Fragment>
+      </div>
     </React.Fragment>
   )
 }

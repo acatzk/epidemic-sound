@@ -1,6 +1,12 @@
+import { IconType } from 'react-icons/lib'
+import { MdDashboard } from 'react-icons/md'
+import { SiAudacity } from 'react-icons/si'
+import { BsTag } from 'react-icons/bs'
+
 export interface ILinks {
   name: string
-  path: string
+  path: string,
+  Icon?: IconType
 }
 
 export const navLinks: ILinks[] = [
@@ -42,4 +48,22 @@ export const searchLinks: ILinks[] = [
     name: 'Sound Effects',
     path: '/sound-effects/search'
   },
+]
+
+export const adminLinks = [
+  {
+    name: 'Dashboard',
+    path: '/dashboard',
+    Icon: MdDashboard
+  },
+  {
+    name: 'Audios',
+    path: '/audios',
+    Icon: SiAudacity
+  },
+  {
+    name: 'Tags',
+    path: '/tags',
+    Icon: BsTag
+  }
 ]
