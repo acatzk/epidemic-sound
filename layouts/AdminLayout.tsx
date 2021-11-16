@@ -16,10 +16,10 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
         <title>Free Music and Sound Effect | {router.pathname}</title>
       </Head>
       <div className="flex min-h-screen h-screen">
-        <div className="w-14 md:w-72 bg-gray-800 border-r border-gray-200 flex-shrink-0">
+        <div className="w-14 md:w-72 bg-indigo-900 border-r border-gray-200 flex-shrink-0 transition-all ease-in-out duration-500">
           <Sidebar />
         </div>
-        <main>{children}</main>
+        <main className="overflow-y-auto w-full">{children}</main>
       </div>
     </React.Fragment>
   )
